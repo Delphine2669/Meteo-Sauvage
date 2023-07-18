@@ -1,9 +1,12 @@
 {
   "name": "meteo-sauvage",
   "private": true,
+  "homepage": "https://delphine2669.github.io/meteo-sauvage",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -19,6 +22,7 @@
     "react-router-dom": "^6.14.2"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react": "^4.0.1",
